@@ -56,6 +56,9 @@
     <Reference Include="FastColoredTextBox, Version=2.16.23.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
       <HintPath>packages\FastColoredTextBoxchinese.1.0.0\lib\net40\FastColoredTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
@@ -71,16 +74,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigureSave.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNodeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNodeSetting.Designer.cs">
+      <DependentUpon>FormNodeSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeViewOperator.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNodeSetting.resx">
+      <DependentUpon>FormNodeSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +137,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon\新建.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\上.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\添加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\下.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\右.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\左.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
